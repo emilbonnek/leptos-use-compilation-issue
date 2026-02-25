@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 leptos = "0.8.16"
-leptos-use = { version = "0.18.1", features = ["use_geolocation", "use_mouse", "use_scroll"] }
+leptos-use = { git = "https://github.com/emilbonnek/leptos-use", branch = "fix/wasm-bindgen-0.2.113-compatibility", features = ["use_geolocation", "use_mouse", "use_scroll"] }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 wasm-bindgen = "0.2.113"

@@ -966,8 +966,7 @@ dependencies = [
 [[package]]
 name = "leptos-use"
 version = "0.18.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "698b68e108e0f98a556d8ba87b42ef336454f56ae8a35fdd3de84fcbd77c8981"
+source = "git+https://github.com/emilbonnek/leptos-use?branch=fix%2Fwasm-bindgen-0.2.113-compatibility#a311ca54ccb526e0434de71ab0a2c21397009b37"
 dependencies = [
  "cfg-if",
  "chrono",
