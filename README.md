@@ -2,6 +2,14 @@
 
 Minimal reproduction of compilation errors in `leptos-use` v0.18.1 when used with `wasm-bindgen` v0.2.113 / `web-sys` v0.3.90.
 
+## Status
+
+**✅ Fix Available:** See the [`test-fix`](https://github.com/emilbonnek/leptos-use-compilation-issue/tree/test-fix) branch which demonstrates that all compilation errors are resolved.
+
+**Related:**
+- Issue: https://github.com/Synphonyte/leptos-use/issues/294
+- PR with fixes: https://github.com/Synphonyte/leptos-use/pull/295
+
 ## Problem
 
 Both `leptos-use` v0.18.1 and `wasm-bindgen` v0.2.113 were released on February 24, 2026. The API changes in wasm-bindgen broke leptos-use compilation.
