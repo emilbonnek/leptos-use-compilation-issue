@@ -2,17 +2,38 @@
 
 Minimal reproduction of compilation errors in `leptos-use` v0.18.1 when used with `wasm-bindgen` v0.2.113 / `web-sys` v0.3.90.
 
+## Status
+
+**✅ This Branch (`test-fix`):** Uses the fix from PR #295 and **compiles successfully**.
+
+**Related:**
+- Main branch (shows errors): https://github.com/emilbonnek/leptos-use-compilation-issue/tree/main
+- Issue: https://github.com/Synphonyte/leptos-use/issues/294
+- PR with fixes: https://github.com/Synphonyte/leptos-use/pull/295
+
 ## Problem
 
 Both `leptos-use` v0.18.1 and `wasm-bindgen` v0.2.113 were released on February 24, 2026. The API changes in wasm-bindgen broke leptos-use compilation.
 
-## Reproduction
+## Verification (This Branch)
+
+This branch uses the fix branch from the fork:
 
 ```bash
 cargo check --target wasm32-unknown-unknown
 ```
 
-## Expected Errors
+**Result:** ✅ Compiles successfully with no errors.
+
+## Original Reproduction (Main Branch)
+
+```bash
+cargo check --target wasm32-unknown-unknown
+```
+
+On the main branch, running `cargo check --target wasm32-unknown-unknown` produces these errors:
+
+## Expected Errors (Main Branch Only)
 
 ### 1. Geolocation API (`use_geolocation`)
 
